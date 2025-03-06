@@ -13,12 +13,12 @@ st.markdown(
 
 # Description
 st.markdown(
-    "📝 Curious about what a review really says? Enter any product review, and **SentimentScope Analyzer** "
+    "🔍 Curious about what a review really says? Enter any product review, and **SentimentScope Analyzer** "
     "will instantly classify its sentiment as **Positive**, **Neutral**, or **Negative**—helping you make informed decisions in seconds!"
 )
 
 # User input field
-user_input = st.text_area("✍️ Enter your product review:", "")
+user_input = st.text_area("Enter your product review:", "")
 
 # Sentiment Emojis Dictionary
 sentiment_emojis = {
@@ -31,7 +31,7 @@ sentiment_emojis = {
 label_mapping = {0: "negative", 1: "neutral", 2: "positive"}
 
 # Analyze Sentiment Button
-if st.button("🔍 Analyze Sentiment"):
+if st.button("Analyze Sentiment"):
     if user_input.strip() == "":
         st.warning("⚠️ Please enter a review to analyze.")
     else:
