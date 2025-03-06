@@ -57,7 +57,7 @@ if st.button("Analyze Sentiment"):
         # Predict sentiment
         prediction = model.predict(review_tfidf)[0]
 
-        # Convert prediction to string to avoid AttributeError
+        # Convert prediction to lowercase and strip spaces
         prediction = str(prediction).strip().lower()
 
         # Define sentiment mapping
@@ -67,11 +67,8 @@ if st.button("Analyze Sentiment"):
             "negative": "😞 Negative"
         }
 
-        # Handle missing keys safely
-        sentiment_label = sentiment_map.get(prediction, "🤔 Unknown Sentiment")
-
-        # Display result
-        st.markdown(f"<h3 style='color: #4CAF50;'>Predicted Sentiment: {sentiment_label}</h3>", unsafe_allow_html=True)
+        # Display result (assuming model always predicts a valid label)
+        st.markdown(f"<h3 style='color: #4CAF50;'>Predicted Sentiment: {sentiment_map[prediction]}</h3>", unsafe_allow_html=True)
 
     else:
         st.warning("⚠️ Please enter a review to analyze.")
