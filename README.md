@@ -16,7 +16,7 @@
 1️⃣ **Data Preprocessing** – Cleans and prepares text reviews for analysis.  
 2️⃣ **Model Training** – A Logistic Regression model is trained on labeled product reviews.  
 3️⃣ **TF-IDF Vectorization** – Converts text into meaningful numerical features.  
-4️⃣ **Sentiment Prediction** – The trained model predicts whether a review is **positive** or **negative**.  
+4️⃣ **Sentiment Prediction** – The trained model predicts whether a review is **positive** or **negative** or **neutral**.  
 
 ---
 
