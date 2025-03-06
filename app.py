@@ -5,8 +5,13 @@ import joblib
 model = joblib.load("sentiment_model.pkl")
 vectorizer = joblib.load("tfidf_vectorizer.pkl")
 
-# Title and description
-st.title("SentimentScope Analyzer")
+# Centering the title using HTML and Markdown
+st.markdown(
+    "<h1 style='text-align: center;'> SentimentScope Analyzer</h1>",
+    unsafe_allow_html=True
+)
+
+# Description
 st.markdown(
     "📝 Curious about what a review really says? Enter any product review, and **SentimentScope Analyzer** "
     "will instantly classify its sentiment as **Positive**, **Neutral**, or **Negative**—helping you make informed decisions in seconds!"
@@ -44,3 +49,9 @@ if st.button("🔍 Analyze Sentiment"):
             st.markdown(f"**Predicted Sentiment:** {sentiment_emojis[sentiment]} **{sentiment.capitalize()}**")
         else:
             st.error("⚠️ Unexpected sentiment prediction. Please check the model output.")
+
+# Add "Developed by" at the bottom
+st.markdown(
+    "<h4 style='text-align: center; margin-top: 50px;'>Developed by: Afifa Siddique</h4>",
+    unsafe_allow_html=True
+)
